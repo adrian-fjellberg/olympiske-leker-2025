@@ -1,15 +1,7 @@
 <template>
-  <div class="max-w-lg mx-auto border-l-2 border-r-2 border-gray-100">
+  <div class="max-w-lg mx-auto md:border-l-2 md:border-r-2 border-gray-100 pb-32 min-h-screen">
     <!-- Top Ribbon -->
-    <div class="border-b-2 border-gray-100 h-[70px] flex items-center justify-center">
-      <router-link to="/">
-        <img
-          src="/img/olympiske_leker_2025_text_logo_horizontal.svg"
-          alt="Ølympiske Leker 2025 Text Logo"
-          class="h-[30px]"
-        >
-      </router-link>
-    </div>
+    <TopRibbon/>
 
     <!-- Hero Section -->
     <div class="flex flex-col items-center justify-center h-[calc(100vh-200px)] max-h-[400px] text-center px-4">
@@ -59,8 +51,12 @@
         Skål, og lykke til 🍺
       </p>
     </div>
+
+    <!-- Øvelser Section -->
+    <ExercisesSection />
   </div>
 </template>
 
 <script setup lang="ts">
+import TopRibbon from "~/components/TopRibbon.vue";
 </script>
