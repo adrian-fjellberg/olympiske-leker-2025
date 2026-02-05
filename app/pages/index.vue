@@ -96,8 +96,8 @@
     </div>
 
     <!-- Games Scoreboard Section -->
-    <div class="p-2">
-      <div class="flex items-center justify-center px-8 gap-4 pt-8 mb-8">
+    <div>
+      <div class="flex items-center justify-center px-8 gap-4 pt-8 mb-8 p-2">
         <div class="border-2 border-black/10 flex-1" />
         <div class="text-2xl">STILLINGSPROGRAM</div>
         <div class="border-2 border-black/10 flex-1" />

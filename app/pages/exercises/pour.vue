@@ -84,8 +84,8 @@
     </div>
 
     <!-- Scoreboard -->
-    <div class="mx-4 mt-6">
-      <h2 class="text-4xl font-bold text-gray-800">RESULTATER</h2>
+    <div class="mt-6">
+      <h2 class="text-4xl font-bold text-gray-800 px-4">RESULTATER</h2>
 
       <GamesScoreboard only-show-game-key="pour" />
     </div>

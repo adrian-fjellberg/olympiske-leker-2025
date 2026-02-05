@@ -2,15 +2,15 @@
   <!-- Global Scoreboard -->
   <section
     v-if="!onlyShowGameKey"
-    class="mb-6"
+    class="mb-6 pattern px-6 py-8"
   >
-    <h2 class="text-lg font-semibold mb-3">🏆 Korktavle</h2>
+    <h2 class="text-2xl text-center font-semibold mb-8 text-white">🏆 Korktavle</h2>
 
     <ul class="space-y-2">
       <li
         v-for="(row, index) in scoreboard.tables.value.global"
         :key="row.member.id"
-        class="flex items-center justify-between bg-white rounded-lg shadow-sm px-3 py-2"
+        class="flex items-center justify-between bg-white/90 rounded-lg shadow-sm px-3 py-2"
       >
         <!-- Rank + Name -->
         <div class="flex items-center gap-3">
@@ -39,6 +39,7 @@
     <div
       v-for="(rows, gameKey) in scoreboard.tables.value.games"
       :key="gameKey"
+      class="px-4"
     >
       <section
         v-if="config.config.value.games[gameKey] && (!onlyShowGameKey || onlyShowGameKey === gameKey)"
@@ -112,3 +113,9 @@ defineProps<{
 }>();
 
 </script>
+
+<style scoped>
+.pattern {
+  background-image: url("/img/pattern_black.png");
+}
+</style>
