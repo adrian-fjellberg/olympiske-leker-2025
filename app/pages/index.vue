@@ -19,7 +19,45 @@
 
     <!-- Countdown Section -->
     <div class="p-4">
-      <CountdownCard />
+      <CountdownCard/>
+    </div>
+
+    <!-- Intro section -->
+    <div class="p-4 text-lg">
+      <h3 class="font-bold mb-2">Velkommen til Ølympiske Leker 2026</h3>
+
+      <p>
+        Én gang i året leggir fornuften igjen hjemme, og en gjeng på 11 godt voksne mannfolk setter kursen mot Nesbyen
+        for det som har blitt en høyt elsket tradisjon: hyttetur med Ølympiske Leker. I år er vi 8 tapre sjeler som
+        faktisk stiller til start, klare for ære, heder, og en svært ettertraktet vandrepokal.
+      </p>
+    </div>
+
+    <!-- Banner -->
+    <div class="my-8">
+      <img src="/img/gubban_banner.svg" alt="Banner" class="w-full">
+    </div>
+
+    <!-- Info section -->
+    <div class="p-4">
+      <p class="mb-4">
+        Ølympiske Leker 2026 går av stabelen lørdag 7. februar, med første startskudd allerede kl. 08:30. Dagen byr på
+        seks øvelser fordelt over tre arenaer: hytta, skibakken og middagsbordet. Her testes deltagerne i alt fra
+        presisjon og kondis til selvkontroll, dømmekraft og evnen til å late som om man fortsatt har full kontroll.
+      </p>
+      <p class="mb-4">
+        Vi starter i lune omgivelser på hytta med klassiske disipliner som setter standarden tidlig. Vi beveger oss så
+        videre til skianlegget, hvor både ferdigheter og verdighet utfordres ytterligere. Når mørket senker seg og
+        energinivået er… variabelt, samles vi til middag på Løa hos Nystølkroken Kafé. Her fullføres lekene med quiz,
+        presisjon og tunge avgjørelser, før dagens vinner kåres og vandrepokalen skifter eier.
+      </p>
+      <p class="mb-4">
+        Ølympiske Leker handler ikke om å vinne. Det handler om å delta (drikke). Og om å vinne. Mest om å vinne. Måtte
+        den beste Gubben seire!
+      </p>
+      <p class="mb-4">
+        Skål, og lykke til 🍺
+      </p>
     </div>
   </div>
 </template>
