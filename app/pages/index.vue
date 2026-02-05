@@ -3,6 +3,10 @@
     <!-- Top Ribbon -->
     <TopRibbon/>
 
+<!--    <pre class="bg-gray-300 p-4 rounded my-4">{{ scoreboard }}</pre>-->
+
+<!--    <pre class="bg-gray-300 p-4 rounded my-4">{{ config.config.value }}</pre>-->
+
     <!-- Hero Section -->
     <div class="flex flex-col items-center justify-center h-[calc(100vh-200px)] max-h-[400px] text-center px-4">
       <img src="/img/olympiske_leker_2025_logo_horizontal.svg" alt="Olympiske Leker 2025 Logo" class="w-32 mb-4">
@@ -57,7 +61,13 @@
 
     <!-- 🕒 Program Section -->
     <div class="p-4">
-      <h3 class="text-2xl font-bold mb-4">Program</h3>
+      <div class="flex items-center justify-center px-8 gap-4 pt-8 mb-8">
+        <div class="border-2 border-black/10 flex-1" />
+        <div class="text-2xl">
+          PROGRAM
+        </div>
+        <div class="border-2 border-black/10 flex-1" />
+      </div>
 
       <ul class="space-y-4">
         <li
@@ -79,6 +89,19 @@
         </li>
       </ul>
     </div>
+
+    <!-- Games Scoreboard Section -->
+    <div class="p-2">
+      <div class="flex items-center justify-center px-8 gap-4 pt-8 mb-8">
+        <div class="border-2 border-black/10 flex-1" />
+        <div class="text-2xl">
+          STILLINGSPROGRAM
+        </div>
+        <div class="border-2 border-black/10 flex-1" />
+      </div>
+
+      <GamesScoreboard />
+    </div>
   </div>
 </template>
 
@@ -87,6 +110,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { formatDistanceToNowStrict, set } from "date-fns";
 import { nb } from "date-fns/locale";
 import TopRibbon from "~/components/TopRibbon.vue";
+import GamesScoreboard from "~/components/GamesScoreboard.vue";
 
 const EVENT_DATE = new Date(2026, 1, 7); // 7 Feb 2026 (month is 0-based)
 
@@ -111,7 +135,7 @@ const now = ref(new Date());
 let timer: number;
 
 onMounted(() => {
-  timer = window.setInterval(() => {
+  timer = setInterval(() => {
     now.value = new Date();
   }, 60_000); // update every minute
 });
