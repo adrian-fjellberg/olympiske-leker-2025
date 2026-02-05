@@ -5,10 +5,10 @@
 
     <!-- Banner -->
     <div>
-      <img src="/img/exercises/beer-run-banner.png" alt="Split the G!" class="w-full"/>
+      <img src="/img/exercises/beer-run-banner.png" alt="Beer run!" class="w-full"/>
       <div class="bg-[#0078D0] flex items-center px-6 py-4">
         <div class="bg-black/25 rounded-full h-16 w-16 mr-4 flex items-center justify-center">
-          <img src="/img/exercises/running.svg" alt="Split the G" class="h-8 w-8 mx-auto my-2"/>
+          <img src="/img/exercises/running.svg" alt="Beer run" class="h-8 w-8 mx-auto my-2"/>
         </div>
         <div>
           <h1 class="text-white text-2xl font-bold">"A quick beer run"</h1>
@@ -55,4 +55,17 @@
 
 <script setup lang="ts">
 import TopRibbon from "~/components/TopRibbon.vue";
+
+useSeoMeta({
+  title: '"A quick beer run"',
+  description: 'Hvordan står det egentlig til med kondisen? Det skal vi finne ut av nå via en liten kjapp joggetur for å finne og styrte en øl. Fjellberg har nemmelig "gjemt" øl i skogholtet langs veien opp til skibakken. La den raskeste og tørsteste vinne!',
+  twitterTitle: '"A quick beer run"',
+  twitterDescription: 'Hvordan står det egentlig til med kondisen? Det skal vi finne ut av nå via en liten kjapp joggetur for å finne og styrte en øl. Fjellberg har nemmelig "gjemt" øl i skogholtet langs veien opp til skibakken. La den raskeste og tørsteste vinne!',
+  twitterImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/beer-run-banner.png',
+  twitterCard: 'summary_large_image',
+  ogTitle: '"A quick beer run"',
+  ogDescription: 'Hvordan står det egentlig til med kondisen? Det skal vi finne ut av nå via en liten kjapp joggetur for å finne og styrte en øl. Fjellberg har nemmelig "gjemt" øl i skogholtet langs veien opp til skibakken. La den raskeste og tørsteste vinne!',
+  ogImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/beer-run-banner.png',
+});
+
 </script>

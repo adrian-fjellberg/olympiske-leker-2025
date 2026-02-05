@@ -56,5 +56,19 @@
 </template>
 
 <script setup lang="ts">
+
 import TopRibbon from "~/components/TopRibbon.vue";
+
+useSeoMeta({
+  title: 'Isrør!',
+  description: 'En kvalmende klassiker',
+  twitterTitle: 'Isrør!',
+  twitterDescription: 'En kvalmende klassiker',
+  twitterImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/isror-banner.png',
+  twitterCard: 'summary_large_image',
+  ogTitle: 'Isrør!',
+  ogDescription: 'En kvalmende klassiker',
+  ogImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/isror-banner.png',
+});
+
 </script>

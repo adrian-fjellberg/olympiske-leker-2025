@@ -61,5 +61,19 @@
 </template>
 
 <script setup lang="ts">
+
 import TopRibbon from "~/components/TopRibbon.vue";
+
+useSeoMeta({
+  title: 'Splitte "G"-en',
+  description: 'Dette er en bar-klassiker.',
+  twitterTitle: 'Splitte "G"-en',
+  twitterDescription: 'Dette er en bar-klassiker.',
+  twitterImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/split-the-g-banner.png',
+  twitterCard: 'summary_large_image',
+  ogTitle: 'Splitte "G"-en',
+  ogDescription: 'Dette er en bar-klassiker.',
+  ogImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/split-the-g-banner.png',
+});
+
 </script>

@@ -53,5 +53,19 @@
 </template>
 
 <script setup lang="ts">
+
 import TopRibbon from "~/components/TopRibbon.vue";
+
+useSeoMeta({
+  title: 'Quiz-time',
+  description: 'Quiz-time er en klassisk øvelse hvor deltagerne skal svare på spørsmål fra en quizbok. Quizmaster velges ut og kaster terning for å velge tema og spørsmål. Deltagerne skriver ned svarene sine, og poeng gis basert på riktige svar. Det kjøres tre runder, og den med flest poeng vinner!',
+  twitterTitle: 'Quiz-time',
+  twitterDescription: 'Quiz-time er en klassisk øvelse hvor deltagerne skal svare på spørsmål fra en quizbok. Quizmaster velges ut og kaster terning for å velge tema og spørsmål. Deltagerne skriver ned svarene sine, og poeng gis basert på riktige svar. Det kjøres tre runder, og den med flest poeng vinner!',
+  twitterImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/quiz-banner.png',
+  twitterCard: 'summary_large_image',
+  ogTitle: 'Quiz-time',
+  ogDescription: 'Quiz-time er en klassisk øvelse hvor deltagerne skal svare på spørsmål fra en quizbok. Quizmaster velges ut og kaster terning for å velge tema og spørsmål. Deltagerne skriver ned svarene sine, og poeng gis basert på riktige svar. Det kjøres tre runder, og den med flest poeng vinner!',
+  ogImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/quiz-banner.png',
+});
+
 </script>

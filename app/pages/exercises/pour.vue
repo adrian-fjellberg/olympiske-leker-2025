@@ -53,5 +53,19 @@
 </template>
 
 <script setup lang="ts">
+
 import TopRibbon from "~/components/TopRibbon.vue";
+
+useSeoMeta({
+  title: 'Presisjonshelling',
+  description: 'Hvor god er en Gubbe på sjenke øl? Med tanke på presisjon der alstå. Det skal vi finne ut av i denne øvelsen. Her er det om å gjøre å helle eksakt 33 ml fra en halvliter boks over på et glass uten å se selve glasset.',
+  twitterTitle: 'Presisjonshelling',
+  twitterDescription: 'Hvor god er en Gubbe på sjenke øl? Med tanke på presisjon der alstå. Det skal vi finne ut av i denne øvelsen. Her er det om å gjøre å helle eksakt 33 ml fra en halvliter boks over på et glass uten å se selve glasset.',
+  twitterImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/pour-banner.png',
+  twitterCard: 'summary_large_image',
+  ogTitle: 'Presisjonshelling',
+  ogDescription: 'Hvor god er en Gubbe på sjenke øl? Med tanke på presisjon der alstå. Det skal vi finne ut av i denne øvelsen. Her er det om å gjøre å helle eksakt 33 ml fra en halvliter boks over på et glass uten å se selve glasset.',
+  ogImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/pour-banner.png',
+});
+
 </script>

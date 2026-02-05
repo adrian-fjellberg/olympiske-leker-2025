@@ -58,4 +58,17 @@
 
 <script setup lang="ts">
 import TopRibbon from "~/components/TopRibbon.vue";
+
+useSeoMeta({
+  title: 'Beerpong quicky!',
+  description: 'Fra diverse campus i USA til fjortisfester i Lillestrøm, beerpong er og blir en legendarisk fest lek. I går kjører vi en "quiky" variant av denne øvelsen, hvor hver spiller skal treffe opp tre kopper med øl, fra den ene siden av bordet til den andre. Her gjelder det å treffe og drikke opp koppene på så få forsøk som mulig.',
+  twitterTitle: 'Beerpong quicky!',
+  twitterDescription: 'Fra diverse campus i USA til fjortisfester i Lillestrøm, beerpong er og blir en legendarisk fest lek. I går kjører vi en "quiky" variant av denne øvelsen, hvor hver spiller skal treffe opp tre kopper med øl, fra den ene siden av bordet til den andre. Her gjelder det å treffe og drikke opp koppene på så få forsøk som mulig.',
+  twitterImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/beer-pong-banner.png',
+  twitterCard: 'summary_large_image',
+  ogTitle: 'Beerpong quicky!',
+  ogDescription: 'Fra diverse campus i USA til fjortisfester i Lillestrøm, beerpong er og blir en legendarisk fest lek. I går kjører vi en "quiky" variant av denne øvelsen, hvor hver spiller skal treffe opp tre kopper med øl, fra den ene siden av bordet til den andre. Her gjelder det å treffe og drikke opp koppene på så få forsøk som mulig.',
+  ogImage: 'https://olympiske-leker-2025.pages.dev/img/exercises/beer-pong-banner.png',
+});
+
 </script>
