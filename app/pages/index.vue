@@ -54,9 +54,87 @@
 
     <!-- Øvelser Section -->
     <ExercisesSection />
+
+    <!-- 🕒 Program Section -->
+    <div class="p-4">
+      <h3 class="text-2xl font-bold mb-4">Program</h3>
+
+      <ul class="space-y-4">
+        <li
+          v-for="item in program"
+          :key="item.time"
+          class="flex gap-4 items-start"
+        >
+          <span class="font-mono font-semibold text-gray-700 w-16 shrink-0">
+            {{ item.time }}
+          </span>
+          <div>
+            <div class="text-gray-900">
+              {{ item.title }}
+            </div>
+            <div class="text-sm text-gray-500">
+              {{ relativeTime(item.time) }}
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
+import { formatDistanceToNowStrict, set } from "date-fns";
+import { nb } from "date-fns/locale";
 import TopRibbon from "~/components/TopRibbon.vue";
+
+const EVENT_DATE = new Date(2026, 1, 7); // 7 Feb 2026 (month is 0-based)
+
+const program = [
+  { time: "08:30", title: "Åpningssermoni" },
+  { time: "09:00", title: "Isrør" },
+  { time: "09:30", title: "Splitte G-en" },
+  { time: "10:30", title: "Vi beveger oss ut til bakker og løyper" },
+  { time: "12:30", title: "Oppmøte i skistua i alpinsenteret" },
+  { time: "12:45", title: "Beer pong quicky" },
+  { time: "13:15", title: "Beer run" },
+  { time: "14:00", title: "Fritt vilt. Folk gjør som de vil." },
+  { time: "18:45", title: "Oppmøte Nystølkroken Café" },
+  { time: "19:00", title: "Middag" },
+  { time: "19:45", title: "Quiz" },
+  { time: "21:30", title: "Presisjonshelling" },
+  { time: "22:00", title: "Vi returnerer til hytta" },
+  { time: "22:30", title: "Pokalutdeling" },
+];
+
+const now = ref(new Date());
+let timer: number;
+
+onMounted(() => {
+  timer = window.setInterval(() => {
+    now.value = new Date();
+  }, 60_000); // update every minute
+});
+
+onUnmounted(() => clearInterval(timer));
+
+function getEventDate(time: string) {
+  const [hours, minutes] = time.split(":").map(Number);
+
+  return set(EVENT_DATE, {
+    hours,
+    minutes,
+    seconds: 0,
+    milliseconds: 0,
+  });
+}
+
+function relativeTime(time: string) {
+  const date = getEventDate(time);
+
+  return formatDistanceToNowStrict(date, {
+    locale: nb,
+    addSuffix: true,
+  });
+}
 </script>
