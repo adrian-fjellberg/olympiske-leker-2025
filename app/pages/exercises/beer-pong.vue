@@ -6,7 +6,7 @@
     <!-- Banner -->
     <div>
       <img src="/img/exercises/beer-pong-banner.png" alt="Beer Pong!" class="w-full"/>
-      <div class="bg-[#0078D0] flex items-center px-6 py-4">
+      <div class="bg-[#F0282D] flex items-center px-6 py-4">
         <div class="bg-black/25 rounded-full h-16 w-16 mr-4 flex items-center justify-center">
           <img src="/img/exercises/beer-pong.svg" alt="Beer Pong" class="h-8 w-8 mx-auto my-2"/>
         </div>
