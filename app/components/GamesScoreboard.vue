@@ -6,6 +6,11 @@
   >
     <h2 class="text-2xl text-center font-semibold mb-8 text-white">🏆 Korktavle</h2>
 
+    <!-- Subtitle -->
+    <p class="text-center text-sm text-white/90 mb-6">
+      Her ser du den totale poengstillingen basert på alle spillene. For detaljerte resultater, sjekk ut spillspesifikke tavler nedenfor.
+    </p>
+
     <ul class="space-y-2">
       <li
         v-for="(row, index) in scoreboard.tables.value.global"
