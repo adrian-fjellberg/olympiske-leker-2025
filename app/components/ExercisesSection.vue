@@ -21,19 +21,19 @@
       <ExercisesDisc href="/exercises/isror" color="#0078D0" bottom-color="#005A9C" class="!absolute top-0 left-[34%]">
         <img src="/img/exercises/dinking-straw.svg" class="w-24 h-24" >
       </ExercisesDisc>
-      <ExercisesDisc to="/" color="#0078D0" bottom-color="#005A9C" class="!absolute top-[14%] left-[18%]">
+      <ExercisesDisc href="/exercises/split-the-g" color="#0078D0" bottom-color="#005A9C" class="!absolute top-[14%] left-[18%]">
         <img src="/img/exercises/split-the-g.svg" class="w-24 h-24" >
       </ExercisesDisc>
-      <ExercisesDisc to="/" color="#F0282D" bottom-color="#AB0004" class="!absolute top-[30%] left-[10%]">
+      <ExercisesDisc href="/exercises/beer-pong" color="#F0282D" bottom-color="#AB0004" class="!absolute top-[30%] left-[10%]">
         <img src="/img/exercises/beer-pong.svg" class="w-24 h-24" >
       </ExercisesDisc>
-      <ExercisesDisc to="/" color="#F0282D" bottom-color="#AB0004" class="!absolute top-[46%] left-[18%]">
+      <ExercisesDisc href="/exercises/beer-run" color="#F0282D" bottom-color="#AB0004" class="!absolute top-[46%] left-[18%]">
         <img src="/img/exercises/running.svg" class="w-24 h-24" >
       </ExercisesDisc>
-      <ExercisesDisc to="/" color="#FFB114" bottom-color="#A26C00" class="!absolute top-[62%] left-[30%]">
+      <ExercisesDisc href="/exercises/quiz" color="#FFB114" bottom-color="#A26C00" class="!absolute top-[62%] left-[30%]">
         <img src="/img/exercises/quiz.svg" class="w-24 h-24" >
       </ExercisesDisc>
-      <ExercisesDisc to="/" color="#FFB114" bottom-color="#A26C00" class="!absolute top-[76%] left-[48%]">
+      <ExercisesDisc href="/exercises/pour" color="#FFB114" bottom-color="#A26C00" class="!absolute top-[76%] left-[48%]">
         <img src="/img/exercises/pour.svg" class="w-24 h-24" >
       </ExercisesDisc>
       <!-- Gubban Character -->
