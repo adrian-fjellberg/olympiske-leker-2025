@@ -4,7 +4,7 @@
     <div class="border-b-2 border-gray-100 h-[70px] flex items-center justify-center">
       <router-link to="/">
         <img
-          src="/img/olympiske_leker_2025_logo_horizontal.svg"
+          src="/img/olympiske_leker_2025_text_logo_horizontal.svg"
           alt="Ølympiske Leker 2025 Text Logo"
           class="h-[30px]"
         >
