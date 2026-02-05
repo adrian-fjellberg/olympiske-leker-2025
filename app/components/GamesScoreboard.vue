@@ -1,6 +1,9 @@
 <template>
   <!-- Global Scoreboard -->
-  <section>
+  <section
+    v-if="!onlyShowGameKey"
+    class="mb-6"
+  >
     <h2 class="text-lg font-semibold mb-3">🏆 Korktavle</h2>
 
     <ul class="space-y-2">
@@ -31,15 +34,15 @@
   <!-- Game Scoreboards -->
   <section
     v-if="config.config.value"
-    class="pt-6 space-y-6"
+    class="space-y-6"
   >
     <div
       v-for="(rows, gameKey) in scoreboard.tables.value.games"
       :key="gameKey"
     >
       <section
-        v-if="config.config.value.games[gameKey]"
-        class="bg-gray-50 rounded-xl p-3"
+        v-if="config.config.value.games[gameKey] && (!onlyShowGameKey || onlyShowGameKey === gameKey)"
+        class="bg-gray-100 rounded-xl p-3"
       >
         <!-- Game header -->
         <div class="mb-3">
@@ -103,5 +106,9 @@ import useScoreboard from "~/composables/useScoreboard";
 
 const scoreboard = useScoreboard();
 const config = useConfig();
+
+defineProps<{
+  onlyShowGameKey?: string;
+}>();
 
 </script>

@@ -50,11 +50,19 @@
         </ul>
       </div>
     </div>
+
+    <!-- Scoreboard -->
+    <div class="mx-4 mt-6">
+      <h2 class="text-4xl font-bold text-gray-800">RESULTATER</h2>
+
+      <GamesScoreboard only-show-game-key="beer-run" />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import TopRibbon from "~/components/TopRibbon.vue";
+import GamesScoreboard from "~/components/GamesScoreboard.vue";
 
 useSeoMeta({
   title: '"A quick beer run"',
