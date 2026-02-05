@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+html, body {
+    font-family: 'Anonymous Pro', monospace;
+}
+
+@theme static {
+
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
