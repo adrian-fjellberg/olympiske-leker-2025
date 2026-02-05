@@ -1,34 +1,3 @@
-
-// export type MemberId = string;
-//
-// export enum RankingType {
-//   POINTS_HIGHER_IS_BETTER = 'POINTS_HIGHER_IS_BETTER',
-//   POINTS_LOWER_IS_BETTER = 'POINTS_LOWER_IS_BETTER',
-//   TIME_LOWER_IS_BETTER = 'TIME_LOWER_IS_BETTER',
-// }
-//
-// export type GameConfig = {
-//   name: string;
-//   rankingType: RankingType;
-//   scoreboard: Record<MemberId, string>;
-// }
-//
-// export type MemberInfo = {
-//   id: MemberId;
-//   name: string;
-// }
-//
-// export type GamesConfig = {
-//   members: MemberInfo[];
-//   games: Record<string, GameConfig>;
-// }
-
-// A members score for a game is determined by the amount of contestants.
-// If there are 10 contestants, the best score is 10 points, the second best is 9 points, and so on.
-// If there are 5 contestants, the best score is 5 points, the second best is 4 points, and so on.
-
-// We create a sort and score function for each game, and then we can use that to calculate the global scoreboard.
-
 import type { GameConfig } from "~/composables/useConfig";
 import useConfig from "~/composables/useConfig";
 
@@ -48,11 +17,16 @@ function scorePointsGame(game: GameConfig) {
     sortedMembers = members.sort((a, b) => parseFloat(game.scoreboard[a] || '0') - parseFloat(game.scoreboard[b] || '0'));
   }
 
+  const totalPoints = members.reduce((sum, memberId) => sum + (parseFloat(game.scoreboard[memberId] || '0')), 0);
+
   // Assign points based on the sorted order
   const gameScoreboard: Record<string, ScoreInfo> = {};
   sortedMembers.forEach((memberId, index) => {
+    // We don't give points if total points is 0
+    const score = totalPoints === 0 ? 0 : members.length - index;
+
     gameScoreboard[memberId] = {
-      score: members.length - index, // Higher rank gets more points
+      score, // Higher rank gets more points
       humanReadableResult: game.scoreboard[memberId] || '0',
     };
   });
@@ -69,6 +43,8 @@ function scoreTimeGame(game: GameConfig) {
     sortedMembers = members.sort((a, b) => parseFloat(game.scoreboard[a] || '0') - parseFloat(game.scoreboard[b] || '0'));
   }
 
+  const totalTime = members.reduce((sum, memberId) => sum + (parseFloat(game.scoreboard[memberId] || '0')), 0);
+
   // Assign points based on the sorted order
   const gameScoreboard: Record<string, ScoreInfo> = {};
 
@@ -77,8 +53,12 @@ function scoreTimeGame(game: GameConfig) {
     const minutes = Math.floor(timeInSeconds / 60);
     const seconds = Math.floor(timeInSeconds % 60);
     const humanReadableTime = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+    // We don't give points if total time is 0
+    const score = totalTime === 0 ? 0 : members.length - index;
+
     gameScoreboard[memberId] = {
-      score: members.length - index, // Higher rank gets more points
+      score, // Higher rank gets more points
       humanReadableResult: humanReadableTime,
     };
   });

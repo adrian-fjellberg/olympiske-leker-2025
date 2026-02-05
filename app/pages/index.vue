@@ -1,4 +1,4 @@
-<template>
+<<template>
   <div class="max-w-lg mx-auto md:border-l-2 md:border-r-2 border-gray-100 pb-32 min-h-screen">
     <!-- Top Ribbon -->
     <TopRibbon/>
@@ -162,3 +162,4 @@ function relativeTime(time: string) {
   });
 }
 </script>
+>

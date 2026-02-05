@@ -133,10 +133,6 @@ let intervalId: number | null = null;
 const config = ref<GamesConfig | null>(null);
 
 async function fetchConfig() {
-  // TODO: We use the dummy config for now, but we should fetch it from the Gist in production
-  config.value = dummyConfig;
-  return;
-
   try {
     const response = await fetch(GIST_URL);
     if (!response.ok) {
@@ -152,7 +148,7 @@ async function fetchConfig() {
 async function startPollingConfig() {
   if (intervalId !== null) return; // Prevent multiple intervals
   await fetchConfig(); // Initial fetch
-  intervalId = setInterval(fetchConfig, 5000);
+  intervalId = setInterval(fetchConfig, 10_000);
 }
 
 function useConfig() {
